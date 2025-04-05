@@ -1,0 +1,24 @@
+{
+    "blogs": [
+      {
+        "id": "1",
+        "title": "Title 1",
+        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis tempora molestias aut dolorem impedit, ab eligendi! Iste, odio necessitatibus aliquid asperiores nobis ea id, architecto placeat quod corporis velit."
+      },
+      {
+        "id": "2",
+        "title": "Title 2",
+        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis tempora molestias aut dolorem impedit, ab eligendi! Iste, odio necessitatibus aliquid asperiores nobis ea id, architecto placeat quod corporis velit."
+      },
+      {
+        "id": "3",
+        "title": "Title 3",
+        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis tempora molestias aut dolorem impedit, ab eligendi! Iste, odio necessitatibus aliquid asperiores nobis ea id, architecto placeat quod corporis velit."
+      },
+      {
+        "id": "4",
+        "title": "Title 4",
+        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis tempora molestias aut dolorem impedit, ab eligendi! Iste, odio necessitatibus aliquid asperiores nobis ea id, architecto placeat quod corporis velit."
+      }
+    ]
+}
