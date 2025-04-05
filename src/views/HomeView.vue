@@ -1,4 +1,5 @@
 <template>
+  <h1>Blogs</h1>
   <div class="home blog-wrapper">
     <BlogList :blogs="blogs"></BlogList>
   </div>

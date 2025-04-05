@@ -1,10 +1,10 @@
 <template>
-
+  <router-link :to="{name:'detail',params:{id:blog.id}}">
     <div class="blog-card">
         <h2>{{blog.title}}</h2>
         <p>{{cutBody}}</p>
     </div>
-
+  </router-link>
 </template>
 
 <script>
