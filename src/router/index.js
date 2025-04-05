@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DetailView from '../views/DetailView.vue'
+import CreateView from '../views/CreateView.vue'
+
 
 const routes = [
   {
@@ -14,6 +16,11 @@ const routes = [
     component: DetailView,
     props: true
   },
+  {
+    path: '/createBlog',
+    name: 'create',
+    component: CreateView
+  }
 ]
 
 const router = createRouter({
