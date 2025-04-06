@@ -27,7 +27,6 @@ export default {
         border-radius: 10px;
         padding: 10px 20px;
         background-color: #070e27;
-        color: white;
         cursor: pointer;
         user-select: none;
     }
@@ -38,5 +37,6 @@ export default {
     }
     a{
         text-decoration: none;
+        color: white;
     }
 </style>

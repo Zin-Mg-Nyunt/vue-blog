@@ -1,26 +1,6 @@
 {
   "blogs": [
     {
-      "id": "1",
-      "title": "Title 1",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis tempora molestias aut dolorem impedit, ab eligendi! Iste, odio necessitatibus aliquid asperiores nobis ea id, architecto placeat quod corporis velit."
-    },
-    {
-      "id": "2",
-      "title": "Title 2",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis tempora molestias aut dolorem impedit, ab eligendi! Iste, odio necessitatibus aliquid asperiores nobis ea id, architecto placeat quod corporis velit."
-    },
-    {
-      "id": "3",
-      "title": "Title 3",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis tempora molestias aut dolorem impedit, ab eligendi! Iste, odio necessitatibus aliquid asperiores nobis ea id, architecto placeat quod corporis velit."
-    },
-    {
-      "id": "4",
-      "title": "Title 4",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis tempora molestias aut dolorem impedit, ab eligendi! Iste, odio necessitatibus aliquid asperiores nobis ea id, architecto placeat quod corporis velit."
-    },
-    {
       "id": "2d99",
       "title": "Laravel",
       "body": "laravel",
@@ -34,6 +14,39 @@
       "body": "php",
       "tags": [
         "php"
+      ]
+    },
+    {
+      "id": "cbec",
+      "title": "HTML",
+      "body": "html",
+      "tags": [
+        "html"
+      ]
+    },
+    {
+      "id": "970d",
+      "title": "CSS",
+      "body": "css",
+      "tags": [
+        "css"
+      ]
+    },
+    {
+      "id": "0943",
+      "title": "Tailwind Css",
+      "body": "Css",
+      "tags": [
+        "css",
+        "css library"
+      ]
+    },
+    {
+      "id": "c96a",
+      "title": "Angular",
+      "body": "Angular",
+      "tags": [
+        "angular"
       ]
     }
   ]

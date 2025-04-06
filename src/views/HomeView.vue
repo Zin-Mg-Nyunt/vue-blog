@@ -1,5 +1,6 @@
 <template>
   <h1>Blogs</h1>
+  <TagCloud :blogs="blogs"></TagCloud>
   <div class="home blog-wrapper">
     <BlogList :blogs="blogs"></BlogList>
   </div>
@@ -7,11 +8,13 @@
 
 <script>
 
+import TagCloud from '../components/TagCloud'
 import BlogList from '../components/BlogList'
 import getBlogs from "../components/getBlogs";
 export default {
   name: 'HomeView',
   components: {
+    TagCloud,
     BlogList,
     
   },

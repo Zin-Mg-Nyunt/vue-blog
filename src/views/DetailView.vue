@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <h2>{{blog.title}}</h2>
     <p>{{blog.body}}</p>
@@ -6,8 +7,10 @@
 </template>
 
 <script>
+import TagCloud from '../components/TagCloud'
 import getBlog from '@/components/getBlog'
 export default {
+  components: { TagCloud },
     props:['id'],
     setup(props){
         let {blog,error,load}=getBlog(props.id)
