@@ -19,7 +19,7 @@
 
 <script>
 import TagCloud from '../components/TagCloud'
-import getBlogs from '@/components/getBlogs'
+import getBlogs from '@/composables/getBlogs'
 import { computed } from 'vue'
 export default {
   components: { TagCloud },

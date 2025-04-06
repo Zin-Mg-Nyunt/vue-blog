@@ -8,7 +8,7 @@
 
 <script>
 import TagCloud from '../components/TagCloud'
-import getBlog from '@/components/getBlog'
+import getBlog from '@/composables/getBlog'
 export default {
   components: { TagCloud },
     props:['id'],

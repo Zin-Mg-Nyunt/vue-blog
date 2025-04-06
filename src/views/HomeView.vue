@@ -10,7 +10,7 @@
 
 import TagCloud from '../components/TagCloud'
 import BlogList from '../components/BlogList'
-import getBlogs from "../components/getBlogs";
+import getBlogs from "../composables/getBlogs";
 export default {
   name: 'HomeView',
   components: {
