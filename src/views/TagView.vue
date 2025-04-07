@@ -15,14 +15,19 @@
         </div>
     </div>
   </div>
+  <div v-else>
+    <LoadingSpiner></LoadingSpiner>
+  </div>
 </template>
 
 <script>
+import LoadingSpiner from '../components/LoadingSpiner'
 import TagCloud from '../components/TagCloud'
 import getBlogs from '@/composables/getBlogs'
 import { computed } from 'vue'
 export default {
-  components: { TagCloud },
+  components: {
+    LoadingSpiner, TagCloud },
     props: ['tag'],
     setup(props){
         let {blogs,error,load}=getBlogs()

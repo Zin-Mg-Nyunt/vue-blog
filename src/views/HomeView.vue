@@ -1,19 +1,26 @@
 <template>
   <h1>Blogs</h1>
-  <TagCloud :blogs="blogs"></TagCloud>
-  <div class="home blog-wrapper">
-    <BlogList :blogs="blogs"></BlogList>
+  <div v-if="blogs.length==0">
+    <LoadingSpiner></LoadingSpiner>
+  </div>
+  <div v-else>
+    <TagCloud :blogs="blogs"></TagCloud>
+    <div class="home blog-wrapper">
+      <BlogList :blogs="blogs"></BlogList>
+    </div>
   </div>
 </template>
 
 <script>
 
+import LoadingSpiner from '../components/LoadingSpiner'
 import TagCloud from '../components/TagCloud'
 import BlogList from '../components/BlogList'
 import getBlogs from "../composables/getBlogs";
 export default {
   name: 'HomeView',
   components: {
+    LoadingSpiner,
     TagCloud,
     BlogList,
     
@@ -22,6 +29,7 @@ export default {
     let {blogs,error,load}=getBlogs()
 
     load()
+    console.log(blogs.value)
 
     return {blogs,error}
   }
