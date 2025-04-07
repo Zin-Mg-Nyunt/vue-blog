@@ -24,6 +24,7 @@
 <script>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { db } from '@/firebase/config';
 export default {
   setup(){
     let router =useRouter();
@@ -43,23 +44,29 @@ export default {
         }
       tag.value="";
     }
-    let addBlog = ()=>{
+    let addBlog = async()=>{
         //check to the data fill complete
+      let newBlog = {
+        title:title.value,
+        body:body.value,
+        tags:tags.value
+      }
       if ( tags.value.length == 0 || title.value == "" || body.value == "") {
         show.value = true;
         return;
       }
-      fetch("http://localhost:3000/blogs/",{
-        method:"POST",
-        headers: {
-          "Content-type":"application/json"
-        },
-        body:JSON.stringify({
-          title:title.value,
-          body:body.value,
-          tags:tags.value
-        })
-      })
+      let res =await db.collection("blogs").add(newBlog)
+      // fetch("http://localhost:3000/blogs/",{
+      //   method:"POST",
+      //   headers: {
+      //     "Content-type":"application/json"
+      //   },
+      //   body:JSON.stringify({
+      //     title:title.value,
+      //     body:body.value,
+      //     tags:tags.value
+      //   })
+      // })
       router.push('/')
     }
     return {title,body,tag,tags,addBlog,collectTag,show}
