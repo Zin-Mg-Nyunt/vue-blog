@@ -1,11 +1,13 @@
 <template>
-
-  <div v-if="blog">
-    <h2>{{blog.title}}</h2>
-    <p>{{blog.body}}</p>
+  <div v-if="error">
+    {{error}}
+  </div>
+  <div v-if="blog=={}">
+    <LoadingSpiner></LoadingSpiner>
   </div>
   <div v-else>
-    <LoadingSpiner></LoadingSpiner>
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.body}}</p>
   </div>
 </template>
 

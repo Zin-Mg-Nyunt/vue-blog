@@ -7,11 +7,8 @@
     <h1>Blogs</h1>
     <TagCloud :blogs="blogs"></TagCloud>
     <div class="blog-wrapper">
-        <div v-for="blog in filteredBlog" :key="blog" class="blog-card">
-            <router-link :to="{name:'detail',params:{id:blog.id}}">
-                <h2>{{blog.title}}</h2>
-                <p>{{blog.body}}</p>
-            </router-link>
+        <div v-for="blog in filteredBlog" :key="blog">
+            <SingleBlog :blog="blog"></SingleBlog>
         </div>
     </div>
   </div>
@@ -21,22 +18,25 @@
 </template>
 
 <script>
+import SingleBlog from '../components/SingleBlog'
 import LoadingSpiner from '../components/LoadingSpiner'
 import TagCloud from '../components/TagCloud'
 import getBlogs from '@/composables/getBlogs'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 export default {
   components: {
+    SingleBlog,
     LoadingSpiner, TagCloud },
     props: ['tag'],
     setup(props){
+        // let cutBody= ref()
         let {blogs,error,load}=getBlogs()
         load()
 
         let filteredBlog=computed(()=>{ // filter blogs by incomming tag data
             return blogs.value.filter((blog)=>{
-                return blog.tags.includes(props.tag)
-        })
+              return blog.tags.includes(props.tag)
+          })
         })
         return{filteredBlog,blogs,error}
     }

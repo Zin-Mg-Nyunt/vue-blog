@@ -29,7 +29,6 @@ export default {
     let {blogs,error,load}=getBlogs()
 
     load()
-    console.log(blogs.value)
 
     return {blogs,error}
   }
