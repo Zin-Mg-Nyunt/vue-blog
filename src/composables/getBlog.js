@@ -2,7 +2,7 @@ import { db } from "@/firebase/config"
 import { ref } from "vue"
 
 let getBlog = (id) => {
-    let blog = ref({})
+    let blog = ref(null)
     let error = ref("")
     let load = async() => {
         try {

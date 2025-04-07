@@ -15,9 +15,9 @@
       <p>{{tag}}</p>
     </div>
 
-    <div style="text-align:center">
+    <!-- <div style="text-align:center"> -->
       <button>Add Blog</button>
-    </div>
+    <!-- </div> -->
   </form>
 </template>
 
@@ -118,7 +118,8 @@ export default {
     color: red;
   }
   button{
-    margin-top: 30px;
+    display: block;
+    margin: 30px auto;
     padding: 15px 20px;
     font-size: 17px;
     border-radius: 10px;
@@ -126,5 +127,9 @@ export default {
     color: white;
     background-color: #070e27;
     font-weight: bold;
+    cursor: pointer;
+  }
+  button:active{
+    opacity: 0.6;
   }
 </style>
