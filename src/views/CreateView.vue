@@ -24,7 +24,7 @@
 <script>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { db } from '@/firebase/config';
+import { db, timestamp } from '@/firebase/config';
 export default {
   setup(){
     let router =useRouter();
@@ -49,7 +49,8 @@ export default {
       let newBlog = {
         title:title.value,
         body:body.value,
-        tags:tags.value
+        tags:tags.value,
+        created_at:timestamp()
       }
       if ( tags.value.length == 0 || title.value == "" || body.value == "") {
         show.value = true;

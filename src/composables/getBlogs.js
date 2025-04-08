@@ -12,7 +12,7 @@ let getBlogs = () => {
             // }
             // let datas = await response.json();
             // blogs.value = datas;
-            let res = await db.collection("blogs").get() // fetch data from firebase
+            let res = await db.collection("blogs").orderBy("created_at","desc").get() // fetch data from firebase orderby created at
             blogs.value = res.docs.map(doc => {
                 return {id:doc.id,...doc.data()} // store in blogs arr
             })
